@@ -3,6 +3,9 @@ name: Sync with upstream
 on:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    branches:
+      - 'release'
   workflow_dispatch:
 
 permissions:
@@ -19,8 +22,6 @@ jobs:
       - name: Fetch upstream
         run: git remote add upstream https://github.com/CorentinTh/it-tools.git
       - name: Sync with upstream
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git fetch upstream
           git checkout main
