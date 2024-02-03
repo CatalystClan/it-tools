@@ -58,4 +58,4 @@ jobs:
           git merge main
           git push origin release
           pnpm i --frozen-lockfile
-          npx release-it
+          npx release-it --ci
