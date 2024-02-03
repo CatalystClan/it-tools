@@ -18,7 +18,7 @@ module.exports = {
     tagMatch: null,
     tagAnnotation: 'Release ${version}',
     tagArgs: [],
-    push: false,
+    push: true,
     pushArgs: ['--follow-tags'],
     pushRepo: '',
   },
