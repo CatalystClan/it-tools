@@ -56,6 +56,6 @@ jobs:
           git fetch origin
           git checkout release
           git merge main
-          git push
+          git push origin release
           pnpm i --frozen-lockfile
           npx release-it
