@@ -27,11 +27,11 @@ jobs:
           git checkout main
           git rebase upstream/main
           git push
-          - uses: pnpm/action-setup@v2
-          name: Install pnpm
-          with:
-            version: 8
-            run_install: false
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
 
       - name: Get pnpm store directory
         shell: bash
@@ -52,5 +52,5 @@ jobs:
           git checkout release
           git merge main
           git push
-          pnpm i
+          pnpm i --frozen-lockfile
           npx release-it
