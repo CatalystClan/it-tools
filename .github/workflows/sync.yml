@@ -46,6 +46,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Git config
+        run: |
+          git config --global user.name "Jake"
+          git config --global user.email "Jake.Laoyu@gmail.com"
+
       - name: Auto release
         run: |
           git fetch origin
