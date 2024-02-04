@@ -27,7 +27,9 @@ const toolStore = useToolStore();
 const { favoriteTools, toolsByCategory } = storeToRefs(toolStore);
 
 const tools = computed<ToolCategory[]>(() => [
-  ...(favoriteTools.value.length > 0 ? [{ name: t('tools.categories.favorite-tools'), components: favoriteTools.value }] : []),
+  ...(favoriteTools.value.length > 0
+    ? [{ name: t('tools.categories.favorite-tools'), components: favoriteTools.value }]
+    : []),
   ...toolsByCategory.value,
 ]);
 </script>
@@ -38,9 +40,7 @@ const tools = computed<ToolCategory[]>(() => [
       <RouterLink to="/" class="hero-wrapper">
         <HeroGradient class="gradient" />
         <div class="text-wrapper">
-          <div class="title">
-            IT - TOOLS
-          </div>
+          <div class="title">DevTool.club</div>
           <div class="divider" />
           <div class="subtitle">
             {{ $t('home.subtitle') }}
@@ -63,9 +63,7 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             IT-Tools
 
-            <c-link target="_blank" rel="noopener" href="/">
-              v{{ version }}
-            </c-link>
+            <c-link target="_blank" rel="noopener" href="/"> v{{ version }} </c-link>
 
             <template v-if="commitSha && commitSha.length > 0">
               -
