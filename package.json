@@ -33,8 +33,8 @@
     "script:create:tool": "node scripts/create-tool.mjs",
     "script:create:ui": "hygen generator ui-component",
     "release": "./release.sh",
-    "deploy": "npm run build && wrangler pages deploy ../dist --branch main",
-    "deploy:preview": "npm run build && wrangler pages deploy ../dist --branch preview"
+    "deploy": "npm run build && wrangler pages deploy ./dist --branch main",
+    "deploy:preview": "npm run build && wrangler pages deploy ./dist --branch preview"
   },
   "dependencies": {
     "@it-tools/bip39": "^0.0.4",
