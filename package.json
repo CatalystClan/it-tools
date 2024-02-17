@@ -32,7 +32,9 @@
     "lint": "eslint src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "script:create:tool": "node scripts/create-tool.mjs",
     "script:create:ui": "hygen generator ui-component",
-    "release": "./release.sh"
+    "release": "./release.sh",
+    "deploy": "npm run build && wrangler pages deploy ../dist --branch main",
+    "deploy:preview": "npm run build && wrangler pages deploy ../dist --branch preview"
   },
   "dependencies": {
     "@it-tools/bip39": "^0.0.4",
@@ -136,6 +138,7 @@
     "vite-svg-loader": "^4.0.0",
     "vitest": "^0.34.0",
     "workbox-window": "^7.0.0",
+    "wrangler": "^3.28.3",
     "zx": "^7.2.1"
   }
 }
