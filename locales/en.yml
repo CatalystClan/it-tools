@@ -7,11 +7,7 @@ home:
   toggleMenu: 'Toggle menu'
   home: Home
   uiLib: 'UI Lib'
-<<<<<<< HEAD
   support: 'Support Dev Tools development'
-=======
-  support: 'Support IT-Tools development'
->>>>>>> main
   buyMeACoffee: 'Buy me a coffee'
   follow:
     title: 'You like it-tools?'
