@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   hooks: {},
   git: {
     changelog: 'git log --pretty=format:"* %s (%h)" ${from}...${to}',
